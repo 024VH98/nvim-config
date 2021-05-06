@@ -6,9 +6,9 @@
 
 - Installing using brew
 
-'''
+```
 brew install neovim
-'''
+```
 
 > Note: You can follow it's github guide https://github.com/neovim/neovim/wiki/Installing-Neovim
 
@@ -16,9 +16,9 @@ brew install neovim
 
 - This is to allow some pluggins to work
 
-'''
+```
 pip3 install --user neovim
-'''
+```
 
 > Note: You have to use python3
 
@@ -26,10 +26,10 @@ pip3 install --user neovim
 
 - Execute this command to dowload it
 
-'''
+```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-'''
+```
 
 > Note: You can also follow the instructions that are in his github repo https://github.com/junegunn/vim-plug
 
@@ -39,10 +39,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 - Create a folder inside '~/.config' called 'nvim' and inside them create a file named init.vim
 
-'''
+```
 mkdir ~/.config/nvim
 touch ~/.config/nvim/init.vim
-'''
+```
 
 ### Put all your init.vim configuration inside that file
 
@@ -57,7 +57,7 @@ touch ~/.config/nvim/init.vim
 ### Add and ENV variable for your VIMRC location
 - You will need to add this to your '.zshrc' or '.bashprofile'
 
-'''
+```
 export MYVIMRC="~/.config/nvim/init.vim"
-'''
+```
 
