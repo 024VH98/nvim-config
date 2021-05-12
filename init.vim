@@ -11,10 +11,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'lyuts/vim-rtags'
 Plug 'https://github.com/vim-utils/vim-man.git'
 Plug 'kien/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 """""""""""""""""""""""""""""
@@ -119,8 +119,8 @@ nnoremap <Leader>ps :Rg<space>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 " jump to definition
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
+" nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+" nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
 """"""""""""""""""""""""""""""
 " EXTRA CONFIGURACION
@@ -147,6 +147,9 @@ let g:ale_linters = { 'javascript': ['eslint'] }
 let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'] }
 let g:ale_fix_on_save =1
 " let g:ale_completion_enabled=1
+" This si for COC.VIM
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 """"""""""""""""""""""""""""""
 " EXTRA EXECUTED FUNCTIONS
 """"""""""""""""""""""""""""""
