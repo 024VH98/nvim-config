@@ -14,6 +14,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 """""""""""""""""""""""""""""
@@ -141,18 +142,22 @@ let g:netrw_winsize=25
 
 let g:ctrlp_use_caching=0
 
+" This is for ale
+let g:ale_linters = { 'javascript': ['eslint'] }
+let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'] }
+let g:ale_fix_on_save =1
+" let g:ale_completion_enabled=1
 """"""""""""""""""""""""""""""
 " EXTRA EXECUTED FUNCTIONS
 """"""""""""""""""""""""""""""
 " this function will trim all the white spaces on save
-fun! TrimWhitespace()
-    let l:save=winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
+" fun! TrimWhitespace()
+"     let l:save=winsaveview()
+"     keeppatterns %s/\s\+$//e
+"     call winrestview(l:save)
+" endfun
 
-augroup FRAN
-    autocmd!
-    autocmd BufWritePre * :call TrimWhitespace()
-augroup END
-
+" augroup FRAN
+"     autocmd!
+"     autocmd BufWritePre * :call TrimWhitespace()
+" augroup END
