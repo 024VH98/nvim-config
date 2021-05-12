@@ -13,6 +13,7 @@ Plug 'https://github.com/vim-utils/vim-man.git'
 Plug 'kien/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 """""""""""""""""""""""""""""
@@ -110,7 +111,7 @@ nnoremap <leader>l :wincmd l<CR>
 " toggle UndoTreeShow
 nnoremap <leader>u :UndotreeShow<CR>
 " show navigation
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :NERDTree<CR>
 " use Rg search
 nnoremap <Leader>ps :Rg<space>
 " use for resize
