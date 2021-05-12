@@ -55,8 +55,6 @@ set signcolumn=yes          " this will add a space for git or linter errors
 set incsearch               " search as characters are entered
 set nohlsearch                " highlight matches
 set smartcase               " it will allow smart search with no case sensitive
-" turn off search highlight
-" nnoremap <leader>da :nohlsearch<CR>
 
 """"""""""""""""""""""""""""""
 " FILES
@@ -118,9 +116,6 @@ nnoremap <Leader>ps :Rg<space>
 " use for resize
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
-" jump to definition
-" nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-" nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
 """"""""""""""""""""""""""""""
 " EXTRA CONFIGURACION
@@ -146,7 +141,6 @@ let g:ctrlp_use_caching=0
 let g:ale_linters = { 'javascript': ['eslint'] }
 let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'] }
 let g:ale_fix_on_save =1
-" let g:ale_completion_enabled=1
 " This si for COC.VIM
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
