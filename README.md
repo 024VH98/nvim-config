@@ -60,4 +60,10 @@ touch ~/.config/nvim/init.vim
 ```
 export MYVIMRC="~/.config/nvim/init.vim"
 ```
+## Special documentation for some plugs
+
+### coc.vim
+
+- You need to install completion packages with `:CocInstall pack`
+- You can check the packages in https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
 
