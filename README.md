@@ -12,8 +12,7 @@ brew install neovim
 
 > Note: You can follow it's github guide https://github.com/neovim/neovim/wiki/Installing-Neovim
 
-### Install Python support
-
+### Install Python support 
 - This is to allow some pluggins to work
 
 ```
@@ -64,6 +63,30 @@ export MYVIMRC="~/.config/nvim/init.vim"
 
 ### coc.vim
 
+- Before you have to make sure that you have node or nvm
+
 - You need to install completion packages with `:CocInstall pack`
 - You can check the packages in https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
+> Note. In case it doesn't work you will need to do it manualy with `npm` or `yarn`
+```
+cd ~/.config/coc/extensions/
+npm install coc-json coc-tsserver
+```
 
+#### coc.vim with ruby
+- Here you will need to install `coc-solargraph`
+- Then you will need to install the gem `solargraph` 
+- Also you need to have the ruby version needed
+
+```
+cd your-project-path
+gem install solargraph
+solargraph config
+rbenv install 2.5.1
+rbenv global 2.5.1
+```
+
+### ALE
+
+#### ALE - Ruby
+- For linting you will need to have installed all in gem file with rubocop
