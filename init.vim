@@ -13,7 +13,8 @@ Plug 'https://github.com/vim-utils/vim-man.git'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
-Plug 'dense-analysis/ale'
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -25,7 +26,7 @@ syntax enable               " enable syntax processing
 
 """"""""""""""""""""""""""""""
 " SPACES & TABS
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""
 set tabstop=4				" number of visual spaces per TAB
 set softtabstop=4		    " number of spaces in tab when editing
 set shiftwidth=4
@@ -137,13 +138,30 @@ let g:netrw_winsize=25
 
 let g:ctrlp_use_caching=0
 
-" This is for ale
-let g:ale_linters = { 'javascript': ['eslint'] }
-let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'] }
+" ALE
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
 let g:ale_fix_on_save =1
-" This si for COC.VIM
+let g:ale_linters_explicit = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️ '
+" COC.VIM
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+let g:coc_global_extensions = ['coc-solargraph']
+" NERDTree
+" This is to always shoy nerdtre
+let NERDTreeShowHidden=1
 """"""""""""""""""""""""""""""
 " EXTRA EXECUTED FUNCTIONS
 """"""""""""""""""""""""""""""
@@ -157,4 +175,4 @@ nmap <silent> gr <Plug>(coc-references)
 " augroup FRAN
 "     autocmd!
 "     autocmd BufWritePre * :call TrimWhitespace()
-" augroup END
+" augroup END"
