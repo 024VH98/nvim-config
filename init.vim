@@ -111,7 +111,7 @@ nnoremap <leader>l :wincmd l<CR>
 " toggle UndoTreeShow
 nnoremap <leader>u :UndotreeShow<CR>
 " show navigation
-nnoremap <leader>pv :NERDTree<CR>
+nnoremap <leader>pd :NERDTreeToggle<CR>
 " use Rg search
 nnoremap <Leader>ps :Rg<space>
 " use for resize
@@ -158,6 +158,7 @@ let g:ale_sign_warning = '⚠️ '
 " COC.VIM
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> ge <C-^>
 let g:coc_global_extensions = ['coc-solargraph']
 " NERDTree
 " This is to always shoy nerdtre
