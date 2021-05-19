@@ -110,7 +110,8 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " toggle UndoTreeShow
 nnoremap <leader>u :UndotreeShow<CR>
-" show navigation
+" show navigation and alwayt open nerttree
+autocmd VimEnter * NERDTree
 nnoremap <leader>pd :NERDTreeToggle<CR>
 " use Rg search
 nnoremap <Leader>ps :Rg<space>
