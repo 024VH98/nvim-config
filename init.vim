@@ -26,7 +26,7 @@ syntax enable               " enable syntax processing
 
 """"""""""""""""""""""""""""""
 " SPACES & TABS
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""
 set tabstop=4				" number of visual spaces per TAB
 set softtabstop=4		    " number of spaces in tab when editing
 set shiftwidth=4
@@ -111,7 +111,6 @@ nnoremap <leader>l :wincmd l<CR>
 " toggle UndoTreeShow
 nnoremap <leader>u :UndotreeShow<CR>
 " show navigation and alwayt open nerttree
-autocmd VimEnter * NERDTree
 nnoremap <leader>pd :NERDTreeToggle<CR>
 " use Rg search
 nnoremap <Leader>ps :Rg<space>
@@ -177,4 +176,4 @@ let NERDTreeShowHidden=1
 " augroup FRAN
 "     autocmd!
 "     autocmd BufWritePre * :call TrimWhitespace()
-" augroup END"
+" augroup END""
