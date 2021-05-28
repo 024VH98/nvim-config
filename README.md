@@ -11,8 +11,9 @@ brew install neovim
 ```
 
 > Note: You can follow it's github guide https://github.com/neovim/neovim/wiki/Installing-Neovim
+> Also you can see my firts tutorial to follow https://dougblack.io/words/a-good-vimrc.html
 
-### Install Python support 
+### Install Python support
 - This is to allow some pluggins to work
 
 ```
@@ -75,7 +76,7 @@ npm install coc-json coc-tsserver
 
 #### coc.vim with ruby
 - Here you will need to install `coc-solargraph`
-- Then you will need to install the gem `solargraph` 
+- Then you will need to install the gem `solargraph`
 - Also you need to have the ruby version needed
 
 ```
