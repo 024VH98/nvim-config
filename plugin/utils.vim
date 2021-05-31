@@ -1,6 +1,8 @@
 """"""""""""""""""""""""""""""
 " UTILS
 """"""""""""""""""""""""""""""
+" for yanking in clipboard
+set clipboard=unnamed
 " highlight last inserted text
 nnoremap gV `[v`]
 " jk is scape
