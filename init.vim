@@ -18,3 +18,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+" LEADER SHORTCUTS
+let mapleader=" "           " leader is space
+
