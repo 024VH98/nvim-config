@@ -4,8 +4,6 @@ mkdir -p ~/.config/nvim/after/plugin
 mkdir -p ~/.config/nvim/lua
 mkdir -p ~/.config/nvim/ftplugin
 
-# For linux version
-# for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
 for f in `find -E . -regex ".*\.vim$|.*\.lua$"`; do
     rm -rf ~/.config/nvim/$f
     ln -s ~/Documents/nvim-config/$f ~/.config/nvim/$f
