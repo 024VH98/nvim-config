@@ -1,5 +1,9 @@
 # Neovim Configuration
 
+## Pre-requisites
+- Node -> *12.^*
+- Yarn optional
+
 ## Neovim instalation
 
 ### Get Neovim
@@ -33,7 +37,27 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 > Note: You can also follow the instructions that are in his github repo https://github.com/junegunn/vim-plug
 
-## Setting up your vim.init
+## Fast config using install file
+
+> Note: This only is supported for Linux and Mac
+
+### Execute install file
+
+- Pick the instalation file for you OS and run it
+
+```
+./install
+```
+
+### Install dependencies
+
+- Open your file `init.vim` and install plug packages
+
+```
+:PlugInstall
+```
+
+## [DEPRECATED] Setting up your vim.init
 
 ### Pre-work
 
