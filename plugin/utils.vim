@@ -2,7 +2,10 @@
 " UTILS
 """"""""""""""""""""""""""""""
 " for yanking in clipboard
-set clipboard=unnamed
+" Mac
+" set clipboard=unnamed
+" Linux
+set clipboard=unnamedplus
 " highlight last inserted text
 nnoremap gV `[v`]
 " jk is scape
